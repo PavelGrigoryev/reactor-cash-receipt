@@ -1,0 +1,70 @@
+###findAll
+GET http://localhost:8080/products
+Accept: application/json
+
+###findById
+GET http://localhost:8080/products/1
+Accept: application/json
+
+###save #1
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "quantity": 1,
+  "name": "Rock-drill Bosh",
+  "price": "575.25",
+  "promotion": true
+}
+
+###save #2
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "quantity": 1,
+  "name": "Golden samovar",
+  "price": "100.99",
+  "promotion": false
+}
+
+###save #3
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "quantity": 1,
+  "name": "Woolen gloves",
+  "price": "30.89",
+  "promotion": true
+}
+
+###save #4
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "quantity": 1,
+  "name": "Edible noodles",
+  "price": "7.41",
+  "promotion": true
+}
+
+###save #5
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "quantity": 1,
+  "name": "Revision hatch",
+  "price": "50.73",
+  "promotion": true
+}
+
+###update
+PATCH http://localhost:8080/products/3?quantity=12
+Content-Type: application/json
+
+###deleteById
+DELETE http://localhost:8080/products/7
+Content-Type: application/json
