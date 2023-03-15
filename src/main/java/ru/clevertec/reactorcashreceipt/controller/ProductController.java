@@ -35,8 +35,8 @@ public class ProductController {
                 .onErrorReturn(ResponseEntity.notFound().build());
     }
 
-    @PatchMapping("/{id}")
-    public Mono<ResponseEntity<ProductDto>> update(@PathVariable Long id, @RequestParam Integer quantity) {
+    @PatchMapping
+    public Mono<ResponseEntity<ProductDto>> update(@RequestParam Long id, Integer quantity) {
         return productService.update(id, quantity)
                 .map(ResponseEntity::ok)
                 .onErrorReturn(ResponseEntity.notFound().build());

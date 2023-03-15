@@ -62,7 +62,7 @@ Content-Type: application/json
 }
 
 ###update
-PATCH http://localhost:8080/products/3?quantity=12
+PATCH http://localhost:8080/products?id=3&quantity=12
 Content-Type: application/json
 
 ###deleteById
